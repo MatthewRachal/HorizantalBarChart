@@ -1,4 +1,7 @@
 
+![Project Image](/ProjectSampleImg.JPG)
+
+
 ## Instructions
 
 1) Run NPM Install to install package dependencies
