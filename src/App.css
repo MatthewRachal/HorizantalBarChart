@@ -1,38 +1,136 @@
-.App {
+
+/*Globals */
+:root {
+  --appColor: hsl(236, 96%, 71%);
+  --appGrey1: rgb(226, 218, 218);
+}
+
+.appContainer {
+  max-width: 2000px;
+  min-width: 320px;
+  margin: auto;
+}
+
+.graphSectionContainer {
+  width: 70%;
+  margin: auto;
+}
+
+/*Dropdown for Bar Chart */
+.dropdownContainer {
+  width: 120px;
+  margin: auto;
+}
+.dropdownHeader {
+  font-size: 1rem;
+  text-align: center;
+}
+.dropdown {
+  position: relative;
+  width: 120px;
+}
+
+.dropdownButton {
+  background-color: transparent;
+  color: white;
+  background-color: var(--appColor);
+  width: 120px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--appGrey1);
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  max-height: 150px;
+  overflow-y: scroll;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownContent .filterLi {
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.dropdownContent .filterLi:hover {
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+/*Horizantal Bar Chart */
+.barChartHeader {
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.horizantalBarChartContainer {
+  width: 100%;
+  height: 700px;
+  max-width: 800px;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.graphBarSection {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 40px;
+  padding: 0.25em 0 0.25em 0;
+}
+.graphBarSection1 {
+  flex-basis: 25%;
+  text-align: center;
+}
+.graphBarSection2 {
+  flex-basis: 75%;
+  max-width: 100%;
+  margin-top: 1.75em;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.graphBarVerticalText {
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.graphBar {
+  background-color: var(--appColor);
+  height: 40px;
+  width: 100%;
+}
+
+.graphSpanDiv {
+  padding-top: 5px;
+}
+.graphSpan {
+  color: black;
+  margin: 0 0 0 103%;
+  font-weight: bold; 
+}
+
+
+
+
+/*Media Queries */
+@media screen and (max-width: 600px)
+{
+  .graphSectionContainer {
+    width: 75%;
   }
-  to {
-    transform: rotate(360deg);
+  .graphSpan {
+    margin: 0 0 0 40%;
   }
 }
